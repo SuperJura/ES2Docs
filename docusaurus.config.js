@@ -77,69 +77,72 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'Escape Simulator 2',
-        logo: {
-          alt: 'Escape Simulator 2',
-          src: 'img/es2.png',
+  {
+    image: 'img/docusaurus-social-card.jpg',
+    navbar: {
+      title: 'Escape Simulator 2',
+      logo: {
+        alt: 'Escape Simulator 2',
+        src: 'img/es2.png',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'gameSidebar',
+          position: 'left',
+          label: 'About the game',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'gameSidebar',
-            position: 'left',
-            label: 'About the game',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'roomEditorSidebar',
-            position: 'left',
-            label: 'Room Editor',
-          },
+        {
+          type: 'docSidebar',
+          sidebarId: 'roomEditorSidebar',
+          position: 'left',
+          label: 'Room Editor',
+        },
 
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/pinestudio',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/PineStudioLLC',
-              },
-              {
-                label: 'Reddit',
-                href: 'https://www.reddit.com/r/PlayEscapeSimulator',
-              }
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/SuperJura/ES2Docs',
-              },
-            ],
-          },
-        ],
-        copyright: `${new Date().getFullYear()} Escape Simulator 2, Pine Studio.`
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/pinestudio',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/PineStudioLLC',
+            },
+            {
+              label: 'Reddit',
+              href: 'https://www.reddit.com/r/PlayEscapeSimulator',
+            }
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/SuperJura/ES2Docs',
+            },
+          ],
+        },
+      ],
+      copyright: `${new Date().getFullYear()} Escape Simulator 2, Pine Studio.`
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: 'dark',   // start in dark mode
+      disableSwitch: false,  // keep the toggle in navbar
+      respectPrefersColorScheme: false, // ignore system preference
+    },
+  },
 };
 
 export default config;

@@ -1,41 +1,38 @@
-# Website
+# Current live link: https://superjura.github.io/ES2Docs/
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Installation & run locally via command line
 
-## Installation
+1. clone forked repository
 
-```bash
-yarn
+fork the repo on github.
+
+then run 
+```
+git clone https://github.com/SuperJura/ES2Docs.git
+```
+2. download and install Nodejs
+
+download latest LTS version.
+```
+https://nodejs.org/en
+```
+3. install dependencies
+
+open console in the cloned repo location
+
+then run
+```
+$ npm install
+```
+4. Start the project
+```
+$ npm start
 ```
 
-## Local Development
+This starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-```bash
-yarn start
-```
+# How to add a doc
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Create new .md file in docs folder
+2. Link the .md file to the sidebar in ``` sidebar.js ```
+3. Modify the .md file as you wish
