@@ -29,7 +29,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
 
   organizationName: 'SuperJura', // Usually your GitHub org/user name.
-  projectName: 'ESDocs', // Usually your repo name.
+  projectName: 'ES2Docs', // Usually your repo name.
   trailingSlash: false,  onBrokenLinks: 'throw',
 
   onBrokenMarkdownLinks: 'warn',
