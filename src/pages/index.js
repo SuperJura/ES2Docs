@@ -12,9 +12,11 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" style={{ color: 'white' }}>
-          {siteConfig.title}
-        </Heading>
+        <img
+          src="img/logo.png" 
+          alt={siteConfig.title}
+          className={styles.heroLogo}
+        />
         <p className="hero__subtitle" style={{ color: 'white' }}>{siteConfig.tagline}</p>
       </div>
     </header>
