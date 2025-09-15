@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -30,7 +30,7 @@ const config = {
 
   organizationName: 'SuperJura', // Usually your GitHub org/user name.
   projectName: 'ES2Docs', // Usually your repo name.
-  trailingSlash: false,  onBrokenLinks: 'throw',
+  trailingSlash: false, onBrokenLinks: 'throw',
 
   onBrokenMarkdownLinks: 'warn',
 
@@ -82,70 +82,58 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Escape Simulator 2',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Escape Simulator 2',
+          src: 'img/es2.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'gameSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'About the game',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            type: 'docSidebar',
+            sidebarId: 'roomEditorSidebar',
+            position: 'left',
+            label: 'Room Editor',
           },
+
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/pinestudio',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Twitter',
+                href: 'https://twitter.com/PineStudioLLC',
               },
+              {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/PlayEscapeSimulator',
+              }
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/SuperJura/ES2Docs',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `${new Date().getFullYear()} Escape Simulator 2, Pine Studio.`
       },
       prism: {
         theme: prismThemes.github,
