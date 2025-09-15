@@ -4,54 +4,53 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'The Game',
+    imgSrc: require('@site/static/img/book.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Escape Simulator is a first-person multiplayer escape room game where
+        you can play Pine's official rooms, rooms created by the community, or create your own with the
+        Room Editor.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Room Editor',
+    imgSrc: require('@site/static/img/re.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The Room Editor is a powerful yet easy-to-use tool that allows anyone to create their own escape rooms and share them with the world.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'The Community',
+    imgSrc: require('@site/static/img/discord.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Join our growing community of escape room enthusiasts on Discord, Reddit, and Twitter to share your creations, get feedback, and collaborate with others.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ imgSrc, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4', styles.feature)}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={imgSrc} alt={title} className={styles.featureImg} />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+        <Heading as="h3" style={{ color: 'white' }}>{title}</Heading>
+        <p style={{ color: 'white' }}>{description}</p>
     </div>
+  </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.featuresWrapper}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (

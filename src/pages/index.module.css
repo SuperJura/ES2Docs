@@ -1,15 +1,3 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -20,4 +8,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.backgroundContainer {
+  position: fixed;
+  inset: 0;          /* full screen */
+  overflow: hidden;
+  z-index: -1;       /* behind everything */
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8); /* dark overlay */
+}
+
+/* Site content sits above background */
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* keep hero transparent and above background */
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  overflow: hidden;
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* small spacing tweak */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+/* optional: make hero text readable on bright areas */
+.hero__title,
+.hero__subtitle {
+  color: var(--ifm-heading-color, #fff);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }

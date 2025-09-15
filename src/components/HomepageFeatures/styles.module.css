@@ -1,11 +1,23 @@
-.features {
+/* Wrapper that pushes features to bottom with slight offset */
+.featuresWrapper {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  align-items: flex-end; /* push to bottom */
+  justify-content: center;
+  padding-bottom: 2rem; /* slight offset from bottom */
+  min-height: 50vh; /* take full viewport height so bottom positioning works */
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+/* Each feature block */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Force all images to the same size */
+.featureImg {
+  width: 180px;   /* choose a fixed size */
+  height: 180px;  /* force uniform height */
+  object-fit: contain; /* keep aspect ratio inside the box */
+  margin-bottom: 1rem;
 }
