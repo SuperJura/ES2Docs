@@ -1,7 +1,9 @@
 const sidebars = {
 
   gameSidebar: [
-    { type: 'doc', id: 'intro/intro', }
+    { type: 'doc', id: 'intro/intro', },
+    { type: 'doc', id: 'contributing/contributing', },
+    { type: 'doc', id: 'press', }
   ],
 
   roomEditorSidebar: [
