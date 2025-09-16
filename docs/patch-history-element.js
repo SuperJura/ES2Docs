@@ -4,11 +4,15 @@ import 'react-vertical-timeline-component/style.min.css';
 
 export const PatchHistoryElement = ({ title, subtitle, blogUrl, dateString }) => (
   <VerticalTimelineElement
-    className="vertical-timeline-element--work"
+    className="vertical-timeline-element--work patch-history-element"
     contentStyle={{
       background: 'var(--ifm-card-background-color)',
       color: 'var(--ifm-font-color-base)',
       boxShadow: 'var(--ifm-global-shadow-md)',
+      transition:
+        'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease',
+      cursor: 'pointer',
+      padding: 0,
     }}
     contentArrowStyle={{
       borderRight: '7px solid var(--ifm-card-background-color)',
@@ -17,6 +21,7 @@ export const PatchHistoryElement = ({ title, subtitle, blogUrl, dateString }) =>
     iconStyle={{
       background: 'var(--ifm-color-primary)',
       color: 'var(--ifm-font-color-base-inverse)',
+      transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
     }}
     dateClassName="dateLabel"
   >
@@ -24,18 +29,12 @@ export const PatchHistoryElement = ({ title, subtitle, blogUrl, dateString }) =>
       href={blogUrl}
       target="_blank"
       rel="noopener noreferrer"
-      style={{
-        color: 'var(--ifm-link-color)',
-        textDecoration: 'none',
-      }}
+      className="patch-history-card-link"
     >
-      <h3 className="vertical-timeline-element-title">{title}</h3>
-      <h4
-        className="vertical-timeline-element-subtitle"
-        style={{ color: 'var(--ifm-color-emphasis-600)' }}
-      >
-        {subtitle}
-      </h4>
+      <div className="patch-history-card-content">
+        <h3 className="vertical-timeline-element-title">{title}</h3>
+        <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
+      </div>
     </a>
   </VerticalTimelineElement>
 );

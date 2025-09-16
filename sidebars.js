@@ -3,8 +3,8 @@ const sidebars = {
   gameSidebar: [
     { type: 'doc', id: 'intro/intro', },
     { type: 'doc', id: 'patch-history', },
+    { type: 'doc', id: 'press', },
     { type: 'doc', id: 'contributing/contributing', },
-    { type: 'doc', id: 'press', }
   ],
 
   roomEditorSidebar: [

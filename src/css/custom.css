@@ -28,3 +28,45 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+
+/* Card hover bounce */
+.patch-history-element {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.5s ease;
+}
+
+.patch-history-element:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ifm-global-shadow-lg);
+}
+
+.patch-history-element .vertical-timeline-element-icon {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.patch-history-element:hover .vertical-timeline-element-icon {
+  transform: scale(1.15);
+}
+
+/* Make whole card clickable */
+.patch-history-card-link {
+  display: block;
+  padding: 1rem;
+  height: 100%;
+  text-decoration: none;
+  color: inherit; /* <-- inherits theme base, keeps heading colors */
+}
+
+/* Keep headings styled by Docusaurus theme */
+.patch-history-card-content h3 {
+  color: var(--ifm-link-color);
+  margin: 0.25rem 0;
+}
+
+.patch-history-card-content h4 {
+  color: var(--ifm-color-emphasis-600);
+  margin: 0.25rem 0;
+}
+
