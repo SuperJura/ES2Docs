@@ -32,6 +32,17 @@
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   background: rgba(43, 43, 54, 0.85); /* slightly less transparent on hover */
 }
+/* Make the whole card clickable */
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* keep text colors */
+  transition: transform 0.25s ease;
+}
+
+.cardLink:hover {
+  transform: translateY(-6px) scale(1.02);
+}
 
 /* Image wrapper */
 .imageWrapper {
