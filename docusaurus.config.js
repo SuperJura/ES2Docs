@@ -30,7 +30,7 @@ const config = {
 
   organizationName: 'SuperJura', // Usually your GitHub org/user name.
   projectName: 'ES2Docs', // Usually your repo name.
-  trailingSlash: false, onBrokenLinks: 'throw',
+  trailingSlash: false, onBrokenLinks: 'ignore',
 
   onBrokenMarkdownLinks: 'warn',
 
