@@ -1,5 +1,4 @@
 const sidebars = {
-
   gameSidebar: [
     { type: 'doc', id: 'intro/intro', },
     { type: 'doc', id: 'patch-history', },
@@ -8,9 +7,10 @@ const sidebars = {
   ],
 
   roomEditorSidebar: [
-    { type: 'doc', id: 'room-editor/intro', }
+    { type: 'doc', id: 'room-editor/intro', },
+    { type: 'doc', id: 'room-editor/navigation', },
+    { type: 'doc', id: 'room-editor/faq/faq', },
   ],
-
 };
 
 export default sidebars;
