@@ -25,7 +25,7 @@ const FeatureList = [
         The Room Editor is a powerful yet easy-to-use tool that allows anyone to create their own escape rooms and share them with the world.
       </>
     ),
-    link: '/docs/room-editor',
+    link: '/docs/room-editor/intro',
     external: false,
   },
   {
